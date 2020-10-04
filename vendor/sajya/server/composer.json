@@ -1,0 +1,52 @@
+{
+    "name": "sajya/server",
+    "description": "Easy implementation of the JSON-RPC 2.0 server for the Laravel framework.",
+    "keywords": [
+        "rpc",
+        "json-prc",
+        "api"
+    ],
+    "homepage": "https://sajya.github.io",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexandr Chernyaev",
+            "email": "bliz48rus@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4",
+        "ext-json": "*",
+        "laravel/framework": "8.*",
+        "orchestra/testbench": "6.*"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.0",
+        "phpunit/php-code-coverage": "^8.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sajya\\Server\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sajya\\Server\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sajya\\Server\\ServerServiceProvider"
+            ]
+        }
+    }
+}
